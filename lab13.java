@@ -3,25 +3,27 @@ import java.util.Scanner;
 public class lab13 {
 
 
-	public String isNumber() {
-		Scanner input = new Scanner(System.in);
+	public String isNumber(int input_num) {
+
 		String result;
+		int save1;
 
-		int num = input.nextInt();
-		boolean ifNum = true;
+		save1 = input_num;
 
-		if(num%3 == 0) {
+		if(input_num%3 == 0 && save1%5 !=0) {
 			return "Fizz";
-		}else if(num%5 == 0) {
+		}else if(input_num%5 == 0 && save1%3 !=0) {
 			return "Buzz";
-		}else if(num%3 == 0 && num%5 == 0) {
-			return "FizzBuZZ";
+
+
+		}else if(input_num%3 == 0 && save1%5 ==0) {
+			return "FizzBuzz";
 		}
+
 		else {
-			String s = String.valueOf(num);
+			String s = String.valueOf(input_num);
 			return s;
 		}
-
 
 	}
 	
